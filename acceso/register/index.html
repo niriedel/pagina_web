@@ -40,129 +40,31 @@
       </div>
     </nav>
 
-    <div class="container">
-      <!-- CAROUSEL -->
-      <h1 class="text-center mt-3">Obras destacadas</h1>
-      <div id="carouselExampleControls" class="carousel slide mt-5 mb-5" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <a target=”_blank” href="obras/obra_impresionista/index.html"><img class="d-block" src="images/impresionista_1.jpg" alt="First slide"></a>
-          </div>
-          <div class="carousel-item">
-            <a target=”_blank” href="obras/obra_dadaista/index.html"><img class="d-block" src="images/dadaismo_4.jpg" alt="Second slide"></a>
-          </div>
-          <div class="carousel-item">
-            <a target=”_blank” href="obras/obra_medieval/index.html"><img class="d-block" src="images/medieval_3.jpg" alt="Third slide"></a>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-      <!-- CARTAS -->
-      <h2 class="text-center mt-3">Artistas</h2>
-      <div class="card-group">
-        <div class="card">
-          <img class="card-img-top" src="images/famous-paintings-1-1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Juanito Perez</h5>
-            <p class="card-text">Esta obra de arte fue inspirada en un recuerdo que tuvo el autor con su esposa, en una tarde de otoño de 1997 , desde ese momento comenzo a trabajar , al punto de que años despues la obra fue finalizada.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="images/images.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Alberto Fernandez</h5>
-            <p class="card-text">Esta maravillosa obra de arte fue realizada por el artista en una noche fria de lluvia donde al mirar por la ventana y preguntarse como habia llegado a ese punto en su vida se inspiró y dejó fluir su creatividad.</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="images/istockphoto-543465140-612x612.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Pablo Pinto</h5>
-            <p class="card-text">En un dia calido de otoño Pablo Pinto feliz por el maravilloso dia que estaba dando la naturaleza fue a una localizacion cercana de su ciudad y comenzo a pintar todo lo que veia con sus ojos de artista.</p>
-          </div>
-        </div>
-      </div>
-
-      <h2 class="text-center mt-3">Categorias Artisticas</h2>
-      <div class="card-group mt-5">
-        <div class="card">
-          <a target=”_blank” href="categorias/ca_medieval/index.html"><img class="card-img-top" src="images/medieval_4.jpg" alt="Card image cap"></a>
-          <div class="card-body">
-            <h5 class="card-title">Medieval</h5>
-            <p class="card-text">Es sobre todo un arte religioso; todo está al servicio de la religión (la aquitectura, escultura y pintura), para transmitir el mensaje de Dios, a quines no sabían leer ni escribir, que eran la mayoría de la población. Es un arte simbólico.</p>
-          </div>
-        </div>
-        <div class="card">
-          <a target=”_blank” href="categorias/ca_dadaista/index.html"><img class="card-img-top" src="images/dadaismo_3.jpg" alt="Card image cap"></a>          
-          <div class="card-body">
-            <h5 class="card-title">Dadaismo</h5>
-            <p class="card-text">El Dadaísmo surge con la intención de destruir todos los códigos y sistemas establecidos en el mundo del arte. Es un movimiento antiartístico, antiliterario y antipoético, ya que cuestiona la existencia del arte, la literatura y la poesía.</p>
-          </div>
-        </div>
-        <div class="card">
-          <a target=”_blank” href="categorias/ca_impresionista/index.html"><img class="card-img-top" src="images/impresionista_2.jpg" alt="Card image cap"></a> 
-          <div class="card-body">
-            <h5 class="card-title">Impresionismo</h5>
-            <p class="card-text">El impresionismo es un estilo pictórico que se origina en Francia, en la segunda mitad del siglo XIX. Se caracteriza por su persistente experimentación con la iluminación (similar al luminismo). El manejo de la luz se considera como un factor crucial para alcanzar belleza y balance en la pintura.</p>
-          </div>
-        </div>
-      </div>
-
-    <div class="mb-4">
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
-    <p class="text-center w-responsive mx-auto mb-5">¿Tienes alguna pregunta? No dudes en contactarnos, nos comunicaremos contigo a la brevedad.</p>
-    <div class="row">
-        <div class="col-12 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                <div class="row">
-                    <div class="col">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Tu nombre</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Tu email</label>
-                        </div>
-                    </div>
+    <div class="container register-container">
+        <div class="w-50 register-form-1 m-auto">
+            <h3>Crea tu cuenta</h3>
+            <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Ingresa tu nombre *" value="" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ingresa tu primer apellido*" value="" />
+              </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Ingresa tu email *" value="" />
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Motivo</label>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Ingresa tu contraseña *" value="" />
+                    <p class="mt-1 text-center text-secondary small">Los campos con * son obligatorios</p>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Tu mensaje</label>
-                        </div>
-
-                    </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Registrarse" />
                 </div>
             </form>
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-            </div>
-            <div class="status"></div>
         </div>
     </div>
 
-      </div>
-    </div>
+
     <!-- Optional JavaScript -->
     <script src="script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
