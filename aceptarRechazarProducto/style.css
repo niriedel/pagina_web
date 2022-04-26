@@ -5,3 +5,7 @@
 .card-group img {
     height: 250px;
 }
+
+.titles {
+    font-weight: 600;
+}
