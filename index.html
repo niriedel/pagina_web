@@ -12,7 +12,7 @@
 
   </head>
   <body>
-    <div>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
      <img src="images/Logotipo_degradado_estudio_varios_colores.png" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,18 +29,18 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contacto</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0 mr-5" type="submit">Search</button>
         </form>
+        <button class="btn btn-primary mr-2 ml-5" type="submit">Ingresar</button>
+        <button class="btn btn-primary" type="submit">Registrarse</button>
       </div>
     </nav>
 
     <div class="container">
+      <!-- CAROUSEL -->
       <h1 class="text-center mt-3">Obras destacadas</h1>
       <div id="carouselExampleControls" class="carousel slide mt-5 mb-5" data-ride="carousel">
         <div class="carousel-inner">
@@ -63,9 +63,8 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </div>
 
-    <!-- <div class="artistas container border mb-5">
+      <!-- <div class="artistas container border mb-5">
       <div class="row">
         <div class="col">Artista1</div>
         <div class="col">Artista2</div>
@@ -95,34 +94,84 @@
       </div>
     </div> -->
 
-    <div class="container">
-    <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="images/famous-paintings-1-1.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Autor X</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <!-- CARTAS -->
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="images/famous-paintings-1-1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Autor X</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/images.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Autor X</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/istockphoto-543465140-612x612.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Autor X</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img class="card-img-top" src="images/images.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Autor X</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+
+    <div class="mb-4">
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
+    <p class="text-center w-responsive mx-auto mb-5">¿Tienes alguna pregunta? No dudes en contactarnos, nos comunicaremos contigo a la brevedad.</p>
+    <div class="row">
+        <div class="col-12 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Tu nombre</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Tu email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Motivo</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Tu mensaje</label>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
+            </div>
+            <div class="status"></div>
         </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="images/istockphoto-543465140-612x612.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Autor X</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-      </div>
+
+        <!--Grid column-->
+
     </div>
-  </div>
 
-  </div>
+      </div>
+      <!--Section: Contact v.2-->
 
+    </div>
     <!-- Optional JavaScript -->
     <script src="script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
