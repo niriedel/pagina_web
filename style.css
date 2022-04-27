@@ -15,3 +15,9 @@
 .card-group img {
     height: 250px;
 }
+
+.card-img-top:hover {
+    transform: scale(1.05);
+    -webkit-transition: transform 1s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
