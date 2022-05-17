@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Api</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+
+
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-light navbar-expand-lg bg-info">
+      <img class="navbar-brand" src="../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="text-white nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">Acerca de </a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="index.html">Otras obras</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" autocomplete="off" action="/action_page.php">
+          <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="myCountry" placeholder="buscar por artista/tipo arte/concepto">
+          </div>
+          <a target= "_blank" href="buscar/index.html"><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
+        </form>
+        <a target= "_blank" href="acceso/login/index.html"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
+        <a target= "_blank" href="acceso/register/index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+      </div>
+    </nav>
+
+    <div class="container text-center mt-5" id="api-box">
+        <h1 class="pt-3">Metropolitan Museum of Art Met Collection</h1>
+        <div class="row">
+            <a target="_blank" href="https://www.metmuseum.org/"> <img id="museum" class="w-100 p-5 rounded" src="../images/metropolitan-museum-of-art-new-york-city.jpg" alt="">
+            </a>
+            </div>
+        <div class="row">
+            <p>Busca según <strong> palabra clave</strong> todas las pinturas que se encuentran en el Metropolitan Museum of Art Met Collection. Este museo representa más de 5,000 años de arte a nivel mundial, y provee información clave de más de 470,000 obras en su colección.</p>
+        </div>
+        <form action="">
+            <div class="form-group mt-3">
+                <label for="form-select">Selecciona una palabra clave para buscar todas las obras que la contengan:</label>
+                <select id="select" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona aquí</option>
+                    <option value="sunflower">Girasol</option>
+                    <option value="sea">Mar</option>
+                    <option value="tree">Árbol</option>
+                    <option value="animal">Animal</option>
+                    <option value="moon">Luna</option>
+                    <option value="sun">Sol</option>
+                    <option value="star">Estrella</option>
+                    <option value="night">Noche</option>
+                    <option value="sadness">Tristeza</option>
+                    <option value="happiness">Felicidad</option>
+                    <option value="hope">Esperanza</option>
+                    <option value="death">Muerte</option>
+                    <option value="killing">Asesinato</option>
+                    <option value="war">Guerra</option>
+                </select>
+            </div>
+        </form>
+       
+        <button id="enviar" type="btn" class="btn btn-lg text-white bg-info mb-5">Buscar</button>
+        <button id="reiniciar" type="btn" class="btn btn-lg text-white bg-info mb-5">Reiniciar</button>
+
+      <p>Clickea la imagen para acceder a más información de la obra y su artista.</p>
+
+    </div>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
