@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jQuery-Validation-Engine-master/css/validationEngine.jquery.css"/>
 
   </head>
   <body>
@@ -129,43 +130,41 @@
       <p class="text-center w-responsive mx-auto mb-5">¿Tienes alguna pregunta? No dudes en contactarnos, nos comunicaremos contigo a la brevedad.</p>
         <div class="row">
             <div class="col-12 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <form id="contact-form" name="contact-form" action="" method="POST">
                     <div class="row">
                         <div class="col">
-                            <div class="md-form mb-0">
-                                <input type="text" id="name" name="name" class="form-control">
+                            <div class="md-form mb-0 form-group">
+                                <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su nombre" type="text" id="name" name="name" class="form-control" value="">
                                 <label for="name" class="">Tu nombre</label>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="md-form mb-0">
-                                <input type="text" id="email" name="email" class="form-control">
+                            <div class="md-form mb-0 form-group">
+                                <input data-validation-engine="validate[required,custom[email]]" type="email" id="email" name="email" class="form-control" value="">
                                 <label for="email" class="">Tu email</label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="md-form mb-0">
-                                <input type="text" id="subject" name="subject" class="form-control">
-                                <label for="subject" class="">Motivo</label>
+                            <div class="md-form mb-0 form-group">
+                                <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese el motivo" type="text" id="motivo" name="motivo" class="form-control">
+                                <label for="motivo" class="">Motivo</label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form">
-                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                <label for="message">Tu mensaje</label>
+                                <textarea data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese un mensaje" type="text" id="mensaje" name="mensaje" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="mensaje">Tu mensaje</label>
+                                <button type="submit" class="btnSubmit btn btn-info text-white mt-1 btn-block mb-3" id="ingresar" value="ingresar">Ingresar</button>
                             </div>
-
                         </div>
                     </div>
                 </form>
                 <div class="text-center text-md-left">
-                    <a class="btn btn-info text-white mt-1 btn-block">Enviar</a>
                 </div>
-                <div class="status"></div>
             </div>
         </div>
       </div>
@@ -173,6 +172,10 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="jQuery-Validation-Engine-master/js/jquery.validationEngine.min.js"></script>
+    <script src="jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script.js"></script>

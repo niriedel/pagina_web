@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+  $("#contact-form").validationEngine();
+
+  $("#contact-form").submit(function (e) { 
+    e.preventDefault();
+    alert("Formulario enviado");
+
+    $("#name").val('');
+    $("#email").val('');
+    $("#motivo").val('');
+    $("#mensaje").val('');
+
+  });
+
+
   var artistasTipoArte = ["Alberto Fernandez","Juanito Perez","Pablo Pinto","Dadaismo", "Medieval","Impresionismo", ];
 
   function autocomplete(inp, arr) {
@@ -101,6 +115,8 @@ $(document).ready(function () {
   } 
 
   autocomplete(document.getElementById("myInput"), artistasTipoArte);
+
+  
 
 });
 
