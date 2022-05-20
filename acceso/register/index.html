@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../jQuery-Validation-Engine-master/css/validationEngine.jquery.css"/>
+
 
   </head>
   <body>
@@ -46,21 +48,21 @@
     <div class="container register-container">
         <div class="w-50 register-form-1 m-auto">
             <h3>Crea tu cuenta</h3>
-            <form>
+            <form id="register-form">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Ingresa tu nombre *" value="" id="userName"/>
+                  <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su nombre"  type="text" class="form-control" placeholder="Ingresa tu nombre *" value="" id="userName"/>
                 </div>
 
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Ingresa tu primer apellido*" value="" id="userApellido"/>
+                  <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su apellido" type="text" class="form-control" placeholder="Ingresa tu primer apellido*" value="" id="userApellido"/>
                 </div>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Ingresa tu email *" value="" id="userEmail"/>
+                    <input data-validation-engine="validate[required,custom[email]]" type="email" class="form-control" placeholder="Ingresa tu email *" value="" id="userEmail"/>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Ingresa tu contraseña *" value="" id="userPassword"/>
+                    <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su clave"  type="password" class="form-control" placeholder="Ingresa tu contraseña *" value="" id="userPassword"/>
                     <p class="mt-1 text-center text-secondary small">Los campos con * son obligatorios</p>
                 </div>
 
@@ -72,12 +74,18 @@
     </div>
 
 
-    <!-- Optional JavaScript -->
-    <script src="script.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="../../jQuery-Validation-Engine-master/js/jquery.validationEngine.min.js"></script>
+    <script src="../../jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- Optional JavaScript -->
+        <script src="script.js"></script>
   </body>
 </html>
 
