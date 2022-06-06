@@ -51,7 +51,7 @@
         <h1>Listado de obras:</h1>
       </div>
       <div class="row">
-        <table border=1>
+        <table class="table" border=1>
           <tr>
             <th>Id</th>
             <th>Nombre</th>
@@ -60,6 +60,7 @@
             <th>Precio</th>
             <th>Tecnica</th>
             <th>IdAutor</th>
+            <th>Opciones</th>
           </tr>
           {% for ob in obras %}
             <tr>
@@ -70,6 +71,7 @@
               <td>{{ob.precio}}</td>
               <td>{{ob.tecnica}}</td>
               <td>{{ob.idAutor}}</td>
+              <td><a href="{%url 'form_mod_obra' ob.idObra %}">Modificar</a></td>
             </tr>
           {% endfor %}
         </table>

@@ -1,7 +1,26 @@
 from django.shortcuts import render
 from .models import Obra
+from .forms import ObraForm
 # Create your views here.
 
+def form_mod_obra(request, id):
+    obra = Obra.objects.get(idObra=id)
+    datos = {
+        'form': ObraForm(instance=obra)
+    }
+    
+    return render(request, 'core/form_mod_obra.html', datos)
+
+def form_obra(request):
+    contexto = { 
+        'form': ObraForm(),
+        }
+    if request.method=='POST':
+        formulario=ObraForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            contexto['mensaje']='Datos guardados correctamente'
+    return render(request, 'core/form_obra.html', contexto)
 
 def tabla(request):
     listaObras = Obra.objects.all()
