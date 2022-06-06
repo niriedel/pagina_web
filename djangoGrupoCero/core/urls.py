@@ -1,11 +1,13 @@
 from django.urls import path
-from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar
+from .views import index, login, register, aceptarRechazarProducto, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar
 
 urlpatterns = [
     path('', index, name="index"),
     #carpeta acceso
     path('acceso/login/', login, name="login"),
     path('acceso/register/', register, name="register"),
+    #carpeta aceptarRechazarProducto
+    path('aceptarRechazarProducto/', aceptarRechazarProducto, name="aceptarRechazarProducto"),
     #carpeta api
     path('api/', api, name="api"),
     #carpeta artistas

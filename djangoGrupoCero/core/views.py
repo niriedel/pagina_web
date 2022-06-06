@@ -13,6 +13,9 @@ def register(request):
     return render(request, 'core/acceso/register/index.html')
 
 # def aceptarRechazarProducto aqui
+def aceptarRechazarProducto(request):
+    return render(request, 'core/aceptarRechazarProducto/index.html')
+
 
 #carpeta api
 def api(request):
