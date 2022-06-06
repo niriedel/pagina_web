@@ -29,7 +29,6 @@ def artista_med(request):
     return render(request, 'core/artistas/art_med/index.html')
 
 #carpeta categorias
-
 def ca_dad(request):
     return render(request, 'core/categorias/ca_dad/index.html')
 
@@ -38,3 +37,15 @@ def ca_imp(request):
 
 def ca_med(request):
     return render(request, 'core/categorias/ca_med/index.html')
+
+#carpeta obras
+def obra_dad(request):
+    return render(request, 'core/obras/obra_dad/index.html')
+
+def obra_imp(request):
+    return render(request, 'core/obras/obra_imp/index.html')
+
+def obra_med(request):
+    return render(request, 'core/obras/obra_med/index.html')
+
+
