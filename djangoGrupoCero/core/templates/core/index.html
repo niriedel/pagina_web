@@ -8,18 +8,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="../../static/core/css/main.css">
->>>>>>> 3fb8885ef398d166aa193180ef7aa334a44eeccb
     <link rel="stylesheet" href="jQuery-Validation-Engine-master/css/validationEngine.jquery.css"/>
     <link rel="stylesheet" href="../../static/core/css/main.css">
 
   </head>
   <body>
     <!-- NAVBAR -->
+    {% load static %}
     <nav class="navbar navbar-light navbar-expand-lg bg-info">
-      <img class="navbar-brand" src="images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+      <img class="navbar-brand" src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,12 +43,11 @@
           </div>
           <a target= "_blank" href="buscar/index.html"><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
         </form>
-        <a target= "_blank" href="acceso/login/index.html"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
-        <a target= "_blank" href="acceso/register/index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+        <a target= "_blank" href="acceso/login/"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
+        <a target= "_blank" href="acceso/register/"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
       </div>
     </nav>
 
-    {% load static %}
     <div class="container main">
       <!-- CAROUSEL -->
       <h1 class="text-center mt-3">Obras destacadas</h1>
@@ -77,7 +74,6 @@
       </div>
 
       <!-- CARTAS -->
-      {% load static %}
       <h2 class="text-center mt-3">Artistas</h2>
       <h6 class="text-center text-secondary">Haz click en el nombre de un artista o su obra para ver todas sus obras.</h6>
       <div class="card-group">

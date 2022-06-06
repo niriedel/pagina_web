@@ -9,3 +9,8 @@ def index(request):
 def login(request):
 
     return render(request, 'core/acceso/login/index.html')
+
+def register(request):
+
+    return render(request, 'core/acceso/register/index.html')
+
