@@ -12,10 +12,9 @@ def login(request):
 def register(request):
     return render(request, 'core/acceso/register/index.html')
 
-# def aceptarRechazarProducto aqui
+#carpeta aceptarRechazarProducto
 def aceptarRechazarProducto(request):
     return render(request, 'core/aceptarRechazarProducto/index.html')
-
 
 #carpeta api
 def api(request):
@@ -55,4 +54,15 @@ def obra_imp(request):
 def obra_med(request):
     return render(request, 'core/obras/obra_med/index.html')
 
+#carpeta usuario
+def usuario_carrito(request):
+    return render(request, 'core/usuario/carrito/index.html')
 
+def usuario_estadoProducto(request):
+    return render(request, 'core/usuario/estadoProducto/index.html')
+
+def usuario_inicio(request):
+    return render(request, 'core/usuario/inicio/index.html')
+
+def usuario_publicar(request):
+    return render(request, 'core/usuario/publicar/index.html')
