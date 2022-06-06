@@ -1,13 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Obra
 from .forms import ObraForm
 # Create your views here.
 
+def form_del_obra(request, id):
+    obra = Obra.objects.get(idObra=id)
+    obra.delete()
+    return redirect(to="../tabla/")
+
+
 def form_mod_obra(request, id):
     obra = Obra.objects.get(idObra=id)
+
     datos = {
         'form': ObraForm(instance=obra)
     }
+
+    if request.method=='POST':
+        formulario=ObraForm(data=request.POST, instance=obra)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']='Modificado correctamente'
     
     return render(request, 'core/form_mod_obra.html', datos)
 

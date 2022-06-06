@@ -62,6 +62,7 @@
             <th>IdAutor</th>
             <th>Opciones</th>
           </tr>
+          <tbody>
           {% for ob in obras %}
             <tr>
               <td>{{ob.idObra}}</td>
@@ -72,9 +73,12 @@
               <td>{{ob.tecnica}}</td>
               <td>{{ob.idAutor}}</td>
               <td><a href="{%url 'form_mod_obra' ob.idObra %}">Modificar</a></td>
+              <td><a href="{%url 'form_del_obra' ob.idObra %}">Eliminar</a></td>
             </tr>
           {% endfor %}
+          </tbody>
         </table>
+        <a href="{%url 'form_obra' %}">Nueva obra</a>
       </div>
     </div>
 
