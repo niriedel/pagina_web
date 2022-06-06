@@ -28,6 +28,10 @@ def artista_imp(request):
 def artista_med(request):
     return render(request, 'core/artistas/art_med/index.html')
 
+#carpeta buscar
+def buscar(request):
+    return render(request, 'core/buscar/index.html')
+
 #carpeta categorias
 def ca_dad(request):
     return render(request, 'core/categorias/ca_dad/index.html')
