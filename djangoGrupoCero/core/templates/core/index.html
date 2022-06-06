@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Grupo Cero</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/core/css/main.css">
+    <link rel="stylesheet" href="jQuery-Validation-Engine-master/css/validationEngine.jquery.css"/>
+    <link rel="stylesheet" href="../../static/core/css/main.css">
+
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    {% load static %}
+    <nav class="navbar navbar-light navbar-expand-lg bg-info">
+      <img class="navbar-brand" src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="text-white nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">Acerca de </a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="api/">Otras obras</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" autocomplete="off" action="/action_page.php">
+          <div class="autocomplete" style="width:150px;">
+            <input id="myInput" type="text" name="myCountry" placeholder="artista/tipoArte/Concepto">
+          </div>
+          <a target= "_blank" href="buscar/"><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
+        </form>
+        <a target= "_blank" href="acceso/login/"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
+        <a target= "_blank" href="acceso/register/"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+      </div>
+    </nav>
+
+    <div class="container main">
+      <!-- CAROUSEL -->
+      <h1 class="text-center mt-3">Obras destacadas</h1>
+      <div id="carouselExampleControls" class="carousel slide mt-5 mb-5" data-ride="carousel">
+        <div class="carousel-inner ">
+          <div class="carousel-item active border">
+            <a target=”_blank” href="obras/obra_imp/"><img class="d-block rounded border" src="{%static 'core/images/impresionista_1.jpg'%}" alt="First slide"></a>
+          </div>
+          <div class="carousel-item">
+            <a target=”_blank” href="obras/obra_dad"><img class="d-block rounded border" src="{%static 'core/images/dadaismo_4.jpg'%}" alt="Second slide"></a>
+          </div>
+          <div class="carousel-item">
+            <a target=”_blank” href="obras/obra_med"><img class="d-block rounded border" src="{%static 'core/images/medieval_3.jpg'%}" alt="Third slide"></a>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- CARTAS -->
+      <h2 class="text-center mt-3">Artistas</h2>
+      <h6 class="text-center text-secondary">Haz click en el nombre de un artista o su obra para ver todas sus obras.</h6>
+      <div class="card-group">
+        <div class="card">
+          <a href="artistas/art_med/"><img class="card-img-top" src="{%static 'core/images/medieval_1.png'%}" alt="Card image cap"></a> 
+          <div class="card-body">
+            <h5 class="card-title"><a target="_blank" href="artistas/art_med/">Juanito Perez</a></h5>
+            <p class="card-text">Esta obra de arte fue inspirada en un recuerdo que tuvo el autor con su esposa, en una tarde de otoño de 1997 , desde ese momento comenzo a trabajar , al punto de que años despues la obra fue finalizada.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="artistas/art_imp/"><img class="card-img-top" src="{%static 'core/images/impresionista_3.jpg'%}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title"><a target="_blank" href="artistas/art_imp/">Alberto Fernandez</a></h5>
+            <p class="card-text">Esta maravillosa obra de arte fue realizada por el artista en una noche fria de lluvia donde al mirar por la ventana y preguntarse como habia llegado a ese punto en su vida se inspiró y dejó fluir su creatividad.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="artistas/art_dad/"><img class="card-img-top" src="{%static 'core/images/dadaismo_1.webp'%}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title"><a target="_blank" href="artistas/art_dad/">Pablo Pinto</a></h5>
+            <p class="card-text">En un dia calido de otoño Pablo Pinto feliz por el maravilloso dia que estaba dando la naturaleza fue a una localizacion cercana de su ciudad y comenzo a pintar todo lo que veia con sus ojos de artista.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-center mt-5">Categorias Artisticas</h2>
+      <h6 class="text-center text-secondary">Haz click en cualquiera de las 3 imágenes para conocer todas las obras de esa categoría</h6>
+      <div class="card-group mt-2">
+        <div class="card">
+          <a target=”_blank” href="categorias/ca_med/"><img class="card-img-top" src="{%static 'core/images/medieval_4.jpg'%}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">Medieval</h5>
+            <p class="card-text">Es sobre todo un arte religioso; todo está al servicio de la religión (la aquitectura, escultura y pintura), para transmitir el mensaje de Dios, a quines no sabían leer ni escribir, que eran la mayoría de la población. Es un arte simbólico.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a target=”_blank” href="categorias/ca_dad/"><img class="card-img-top" src="{%static 'core/images/dadaismo_3.jpg'%}" alt="Card image cap"></a>          
+          <div class="card-body">
+            <h5 class="card-title">Dadaismo</h5>
+            <p class="card-text">El Dadaísmo surge con la intención de destruir todos los códigos y sistemas establecidos en el mundo del arte. Es un movimiento antiartístico, antiliterario y antipoético, ya que cuestiona la existencia del arte, la literatura y la poesía.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a target=”_blank” href="categorias/ca_imp/"><img class="card-img-top" src="{%static 'core/images/impresionista_2.jpg'%}" alt="Card image cap"></a> 
+          <div class="card-body">
+            <h5 class="card-title">Impresionismo</h5>
+            <p class="card-text">El impresionismo es un estilo pictórico que se origina en Francia, en la segunda mitad del siglo XIX. Se caracteriza por su persistente experimentación con la iluminación (similar al luminismo). El manejo de la luz se considera como un factor crucial para alcanzar belleza y balance en la pintura.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4" id="contacto">
+      <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
+      <p class="text-center w-responsive mx-auto mb-5">¿Tienes alguna pregunta? No dudes en contactarnos, nos comunicaremos contigo a la brevedad.</p>
+        <div class="row">
+            <div class="col-12 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <div class="md-form mb-0 form-group">
+                                <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su nombre" type="text" id="name" name="name" class="form-control" value="">
+                                <label for="name" class="">Tu nombre</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="md-form mb-0 form-group">
+                                <input data-validation-engine="validate[required,custom[email]]" type="email" id="email" name="email" class="form-control" value="">
+                                <label for="email" class="">Tu email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0 form-group">
+                                <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese el motivo" type="text" id="motivo" name="motivo" class="form-control">
+                                <label for="motivo" class="">Motivo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <textarea data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese un mensaje" type="text" id="mensaje" name="mensaje" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="mensaje">Tu mensaje</label>
+                                <button type="submit" class="btnSubmit btn btn-info text-white mt-1 btn-block mb-3" id="ingresar" value="ingresar">Ingresar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center text-md-left">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="jQuery-Validation-Engine-master/js/jquery.validationEngine.min.js"></script>
+    <script src="jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

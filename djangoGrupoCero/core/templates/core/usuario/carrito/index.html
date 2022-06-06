@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Carro Productos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../static/core/css/main.css">
+    <link rel="stylesheet" href="../../../../static/core/css/usuario.css">
+
+
+    
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+          <!-- NAVBAR -->
+          <nav class="navbar navbar-expand-lg bg-info text-white">
+            <img src="../../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+           
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                 <li class="nav-item active">
+                 </li>
+                 <li class="nav-item">
+                    <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
+                  </li>
+                 <li class="nav-item">
+                   <a class="text-white nav-link" href="#">Acerca de </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="text-white nav-link" href="#">Contacto</a>
+                 </li>
+               </ul>
+               <ul class="list-inline">
+                 <li class="list-inline-item">
+                   <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../inicio/index.html">Informacion</a> 
+                 </li>
+                  <li class="list-inline-item">
+                    <a href="../carrito/index.html">
+                      <i class="fa-solid fas fa-shopping-cart mr-2 fa-2x"></i>Carrito
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="../publicar/index.html">
+                      <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Agregar obra
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="../estadoProducto/index.html">
+                      <i class="fa-solid fa-address-card mr-2 fa-2x"></i>Estado Obra
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="../../index.html">
+                      <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+                    </a>
+                  </li>
+               </ul>
+             </div>
+        </nav>
+
+    <div class="container mt-5 p-3 rounded cart table-shadow">
+      <div class="row no-gutters">
+          <div class="col-md-8">
+              <div class="product-details mr-2">
+                  <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span class="ml-2"><a href="../../index.html">Seguir comprando</a> </span></div>
+                  <hr>
+                  <h6 class="mb-0">Carrito de compras</h6>
+                  <div class="d-flex justify-content-between"><span>Tienes 3 productos en tu carrito</span>
+                      <div class="d-flex flex-row align-items-center"><span class="text-black-50">Ordenar por:</span>
+                          <div class="price ml-2"><span class="mr-1">precio</span><i class="fa fa-angle-down"></i></div>
+                      </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                      <div class="d-flex flex-row"><img class="rounded" src="../imagenes/medieval_3_20.jpg" width="40">
+                          <div class="ml-2"><span class="font-weight-bold d-block">Guerra Santa</span><span class="spec">Medieval</span></div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$385.000</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                      <div class="d-flex flex-row"><img class="rounded" src="../imagenes/impresionista_1_20.jpg" width="40">
+                          <div class="ml-2"><span class="font-weight-bold d-block">Calida Noche</span><span class="spec">Impresionismo</span></div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$135.000</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                      <div class="d-flex flex-row"><img class="rounded" src="../imagenes/dadaismo_4_20.jpg" width="40">
+                          <div class="ml-2"><span class="font-weight-bold d-block">Reflejo de vejez</span><span class="spec">Dadaismo</span></div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$75.000</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="payment-info bg-info">
+                  <div class="d-flex justify-content-between align-items-center"><span>Detalles de tu tarjeta</span><img class="rounded" src="../imagenes/user_20.jpg"width="30"></div><span class="type d-block mt-3 mb-1">Tipo de tarjeta</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png"/></span> </label>
+
+<label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png"/></span> </label>
+
+<label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png"/></span> </label>
+
+
+<label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png"/></span> </label>
+                  <div><label class="credit-card-label">Nombre en la tarjeta</label><input type="text" class="form-control credit-inputs" placeholder="Name"></div>
+                  <div><label class="credit-card-label">Numero de tarjeta</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"></div>
+                  <div class="row">
+                      <div class="col-md-6"><label class="credit-card-label">Fecha</label><input type="text" class="form-control credit-inputs" placeholder="12/24"></div>
+                      <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342"></div>
+                  </div>
+                  <hr class="line">
+                  <div class="d-flex justify-content-between information"><span>Subtotal</span><span>$595.000</span></div>
+                  <div class="d-flex justify-content-between information"><span>Envio</span><span>$20.00</span></div>
+                  <div class="d-flex justify-content-between information"><span>Total(Incl. impuesto)</span><span>$595.020</span></div><button class="btn btn-light btn-block d-flex justify-content-between mt-3" type="button"><span>$595.020</span><span>Comprar<i class="fa fa-long-arrow-right ml-1"></i></span></button></div>
+          </div>
+      </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
