@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Grupo Cero</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../jQuery-Validation-Engine-master/css/validationEngine.jquery.css"/>
+
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-info text-white">
+     <img src="../../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="../../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">Acerca de </a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="buscar por artista/tipo arte/concepto" aria-label="Search">
+        <button type="button" class="btn btn-light mr-5  my-2 my-sm-0">Buscar</button>
+
+        </form>
+        <a href="index.html"><button type="button" class="btn btn-light mr-1 ml-5">Ingresar</button></a>
+        <a target= "_blank" href="../register/index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+      </div>
+    </nav>
+
+    <div class="container login-container">
+        <div class="w-50 login-form-1 m-auto">
+            <h3>Iniciar sesión</h3>
+            <form id="loginForm" method="POST">
+                <div class="form-group">
+                    <input data-validation-engine="validate[required,custom[email]]" type="email" class="form-control" placeholder="Ingresa tu email *" id="userEmail" value="" />
+                </div>
+                <div class="form-group">
+                    <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su clave" type="password" class="form-control" placeholder="Ingresa tu contraseña *" id="userPassword" value="" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btnSubmit" id="ingresar" value="ingresar">Ingresar</button>
+                </div>
+                <a href="#" class="ForgetPwd">¿Olvidaste tu contraseña?</a>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="../../jQuery-Validation-Engine-master/js/jquery.validationEngine.min.js"></script>
+    <script src="../../jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
+

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Categoria Producto</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../jQuery-Validation-Engine-master/css/validationEngine.jquery.css"/>
+
+    
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+          <!-- NAVBAR -->
+   <!-- NAVBAR -->
+   <nav class="navbar navbar-expand-lg bg-info text-white">
+    <img src="../../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+         </li>
+         <li class="nav-item">
+            <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
+          </li>
+         <li class="nav-item">
+           <a class="text-white nav-link" href="#">Acerca de </a>
+         </li>
+         <li class="nav-item">
+           <a class="text-white nav-link" href="#">Contacto</a>
+         </li>
+       </ul>
+       <ul class="list-inline">
+         <li class="list-inline-item">
+           <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../inicio/index.html">Informacion</a> 
+         </li>
+          <li class="list-inline-item">
+            <a href="../carrito/index.html">
+              <i class="fa-solid fas fa-shopping-cart mr-2 fa-2x"></i>Carrito
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="../publicar/index.html">
+              <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Agregar obra
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="../estadoProducto/index.html">
+              <i class="fa-solid fa-address-card mr-2 fa-2x"></i>Estado Obra
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="../../index.html">
+              <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+            </a>
+          </li>
+       </ul>
+     </div>
+</nav>
+
+    <div class="container text-center mt-5 formulario-obra bg-white">
+        <h2 class="mb-5 pt-3">Agregar obra</h2>
+        <form id="agregar-form">
+            <div class="row mb-4">
+                <div class="col-2">
+                  <label for="userName">Nombre de la obra:</label>
+                </div>
+                <div class="col-8">
+                    <div class="form-group">
+                      <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingrese su nombre"  type="text" class="form-control" value="" id="userName"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2">
+                  <label for="precio">Precio:</label>
+                </div>
+                <div class="col-8">
+                  <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingresa el precio"  type="number" class="form-control" value="" id="precio"/>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2">
+                  <label for="descripcion">Descripción:</label>
+                </div>
+                <div class="col-8">
+                    <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingresa una descripcion"  type="text" class="form-control" value="" id="descripcion"/>
+                 </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2">
+                  <label for="historia">Historia:</label>
+                </div>
+                <div class="col-8">
+                    <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingresa una historia"  type="text" class="form-control" value="" id="hitoria"/>
+                 </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2">
+                  <label for="historia">Técnica usada::</label>
+                </div>
+                <div class="col-8">
+                    <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Ingresa la tecnica usada"  type="text" class="form-control" value="" id="tecnica"/>
+                 </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-2">
+                    <p>Adjuntar archivo:</p>
+                </div>
+                <div class="col-8">
+                    <div class="d-flex">
+                        <i class="fa fa-paperclip fa-2x mr-1" aria-hidden="true"></i>
+                        <input data-validation-engine="validate[required]" data-errormessage-value-missing="*Sube un archivo"  type="file" class="form-control" >
+                    </div>
+                 </div>
+            </div>
+        </form>
+
+        <a href="../usuario/estadoProducto/index.html"><button type="button" class="mb-3 btn btn-info" >Publicar obra</button></a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+    <script src="../../jQuery-Validation-Engine-master/js/jquery.validationEngine.min.js"></script>
+    <script src="../../jQuery-Validation-Engine-master/js/languages/jquery.validationEngine-es.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
