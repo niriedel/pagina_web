@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, login, register, aceptarRechazarProducto, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar
+from .views import index, login, register, aceptarRechazarProducto, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar, tabla
 
 urlpatterns = [
     path('', index, name="index"),
@@ -29,4 +29,7 @@ urlpatterns = [
     path('usuario/estadoProducto/', usuario_estadoProducto, name="usuario_estadoProducto"),
     path('usuario/inicio/', usuario_inicio, name="usuario_inicio"),
     path('usuario/publicar/', usuario_publicar, name="usuario_publicar"),
+    #carpeta tabla
+    path('tabla/', tabla, name="tabla")
+
 ]

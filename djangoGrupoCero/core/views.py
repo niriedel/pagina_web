@@ -1,6 +1,14 @@
 from django.shortcuts import render
-
+from .models import Obra
 # Create your views here.
+
+
+def tabla(request):
+    listaObras = Obra.objects.all()
+    contexto = {
+        'obras': listaObras,
+    }
+    return render(request, 'core/tabla/index.html', contexto)
 
 def index(request):
     return render(request, 'core/index.html')
