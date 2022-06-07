@@ -1,10 +1,10 @@
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
-    }
+}
 
 
-    .payment-info {
+.payment-info {
   background: blue;
   padding: 10px;
   border-radius: 6px;

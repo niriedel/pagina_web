@@ -1,13 +1,11 @@
 from django.urls import path
-from .views import index, login, register, aceptarRechazarProducto, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar, tabla, form_obra, form_mod_obra, form_del_obra
+from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar, ver_obras, form_add_obra, form_mod_obra, form_del_obra, admin_inicio, admin_aceptarRechazarProducto
 
 urlpatterns = [
     path('', index, name="index"),
     #carpeta acceso
     path('acceso/login/', login, name="login"),
     path('acceso/register/', register, name="register"),
-    #carpeta aceptarRechazarProducto
-    path('aceptarRechazarProducto/', aceptarRechazarProducto, name="aceptarRechazarProducto"),
     #carpeta api
     path('api/', api, name="api"),
     #carpeta artistas
@@ -29,10 +27,12 @@ urlpatterns = [
     path('usuario/estadoProducto/', usuario_estadoProducto, name="usuario_estadoProducto"),
     path('usuario/inicio/', usuario_inicio, name="usuario_inicio"),
     path('usuario/publicar/', usuario_publicar, name="usuario_publicar"),
-    #carpeta tabla
-    path('tabla/', tabla, name="tabla"),
     #archivos form
-    path('form-obra', form_obra, name="form_obra"),
+    path('form-add-obra', form_add_obra, name="form_add_obra"),
     path('form-mod-obra/<id>', form_mod_obra, name="form_mod_obra"),
-    path('form-del-obra/<id>', form_del_obra, name="form_del_obra")
+    path('form-del-obra/<id>', form_del_obra, name="form_del_obra"),
+    #carpeta admin
+    path('administrador/inicio/', admin_inicio, name="admin_inicio"),
+    path('administrador/aceptarRechazarProducto/', admin_aceptarRechazarProducto, name="admin_aceptarRechazarProducto"),
+    path('administrador/ver_obras/', ver_obras, name="ver_obras")
 ]

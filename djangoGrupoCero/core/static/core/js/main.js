@@ -1,8 +1,6 @@
-$(document).ready(function () {
+$(document).ready(function () {  
 
-    $("#contact-form").validationEngine();
-  
-    $("#contact-form").submit(function (e) { 
+  $("#contact-form").submit(function (e) { 
       e.preventDefault();
       alert("Formulario enviado");
   

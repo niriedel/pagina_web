@@ -1,0 +1,23 @@
+nav a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar img {
+    width: 100%;
+}
+
+.navbar img {
+    width: 5rem;
+}
+
+.navbar .nav-item a {
+    padding-top: 2rem;
+}
+
+.add-form input{
+}
+
+.container {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}

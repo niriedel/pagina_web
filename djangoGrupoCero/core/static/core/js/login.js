@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    $("#loginForm").validationEngine();
-    
     $("#loginForm").submit(function (event) { 
         event.preventDefault();
 
@@ -16,12 +14,11 @@ $(document).ready(function () {
 
         if (userEmail === "admin@gmail.com" && userPassword === "admin") {
             alert("Bienvenido administrador, ingresando a tu perfil...");
-            window.location.replace("../../aceptarRechazarProducto/index.html");
+            window.location.replace("../../administrador/inicio/");
             return
         } 
 
         alert("Clave o usuario incorrecto, intenta denuevo");
-        
 
     });
 });
