@@ -1,23 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Grupo Cero</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <title>Modificar Obra</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../static/core/css/agregarObra.css">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
+    <title>Ver obras</title>
   </head>
   <body>
-        <!-- NAVBAR -->
-        {% load static %}
-        <nav class="navbar navbar-light navbar-expand-lg bg-info">
-          <img class="navbar-brand" src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+    <!-- NAVBAR -->
+    {% load static %}
+    <nav class="navbar navbar-expand-lg bg-info text-white">
+        <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -25,46 +26,64 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="text-white nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="text-white nav-link" href="#">Acerca de </a>
               </li>
               <li class="nav-item">
-                <a class="text-white nav-link" href="#contacto">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="text-white nav-link" href="api/">Otras obras</a>
+                <a class="text-white nav-link" href="#">Contacto</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" autocomplete="off" action="/action_page.php">
-              <div class="autocomplete" style="width:150px;">
-                <input id="myInput" type="text" name="myCountry" placeholder="artista/tipoArte/Concepto">
-              </div>
-              <a target= "_blank" href="buscar/"><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
-            </form>
-            <a target= "_blank" href="acceso/login/"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
-            <a target= "_blank" href="acceso/register/"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../administrador/inicio/">Informacion</a> 
+              </li>
+              <li class="list-inline-item">
+                <a href="../administrador/ver_obras/">
+                  <i class="fa-solid fa-rectangle-list mr-2 fa-2x"></i>Ver Obras
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../agregar_obra/">
+                  <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Nueva obra
+                </a>
+                <li class="list-inline-item">
+                  <a href="../aceptarRechazarProducto/">
+                    <i class="fas fa-book-open mr-2 fa-2x"></i></i>Estado obra
+                  </a>
+                </li>
+              <li class="list-inline-item">
+                <a href="../../">
+                  <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+                </a>
+              </li>
+              
+            </ul>
           </div>
-        </nav>
-      <div class="container">
-          <div class="row">
-            <h3>Modificar Obras</h3>
-          </div>
-          <div class="row">
+    </nav>
 
-            <form method="post" action="" id="formulario">
+    <div class="container main mt-5">
+      <h3 class="text-center mb-3 pt-3 ">Modificar Obras</h3>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <form method="post" action="" id="formulario" class="mod-form">
                 {% csrf_token %}
                 <table>
                     {{form.as_table}}
                 </table>
                 <input type="submit" class="btn btn-danger" id="modificar" value="Modificar">
                 <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
-                <div id="error" class="alert alert-danger">
+                <div id="error" class="alert alert-success mt-3">
                   {{mensaje}}
                 </div>
             </form>
           </div>
+          <div class="col-4"></div>
+        </div>
     </div>
   </body>
 </html>

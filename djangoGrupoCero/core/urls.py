@@ -28,7 +28,7 @@ urlpatterns = [
     path('usuario/inicio/', usuario_inicio, name="usuario_inicio"),
     path('usuario/publicar/', usuario_publicar, name="usuario_publicar"),
     #archivos form
-    path('form-add-obra', form_add_obra, name="form_add_obra"),
+    path('administrador/agregar_obra/', form_add_obra, name="form_add_obra"),
     path('form-mod-obra/<id>', form_mod_obra, name="form_mod_obra"),
     path('form-del-obra/<id>', form_del_obra, name="form_del_obra"),
     #carpeta admin

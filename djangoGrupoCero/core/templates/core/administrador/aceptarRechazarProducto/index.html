@@ -8,39 +8,62 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../static/core/css/aceptarRechazarProducto.css">
-    
+    <link rel="stylesheet" href="../../../../static/core/css/agregarObra.css">
+
     <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>  
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
 </head>
   <body>
-          <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-info text-white">
-        <img src="../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-       
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-           <ul class="navbar-nav mr-auto">
-             <li class="nav-item active">
-             </li>
-             <li class="nav-item">
-                <a class="text-white nav-link" href="../index.html">Inicio</a>
-              </li>
-             <li class="nav-item">
-               <a class="text-white nav-link" href="#">Acerca de </a>
-             </li>
-             <li class="nav-item">
-               <a class="text-white nav-link" href="#">Contacto</a>
-             </li>
-           </ul>
-           <form class="form-inline my-2 my-lg-0">
-            <i class="fa-solid fa-user mr-2 fa-2x"></i>Administrador
-           </form>
-           
-         </div>
-    </nav>
+      <!-- NAVBAR -->
+      {% load static %}
+      <nav class="navbar navbar-expand-lg bg-info text-white">
+          <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+                <li class="nav-item">
+                  <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#">Acerca de </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../inicio/">Informacion</a> 
+                </li>
+                <li class="list-inline-item">
+                  <a href="../ver_obras/">
+                    <i class="fa-solid fa-rectangle-list mr-2 fa-2x"></i>Ver Obras
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../agregar_obra/">
+                    <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Nueva obra
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../aceptarRechazarProducto/">
+                    <i class="fas fa-book-open mr-2 fa-2x"></i></i>Estado obra
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="../../">
+                    <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+      </nav>
 
     <div class="container text-center mt-3 admin pl-5">
         <h1 class="mb-5 pt-3">Formulario para aceptar o rechazar obra</h1>
@@ -92,7 +115,7 @@
                             <p class="titles">Imagen adjuntada:</p>
                         </div>
                         <div class="col-9">
-                            <img class="w-25 mt-2 mb-2" src="../images/horrible.JPG" alt="">
+                            <img class="w-25 mt-2 mb-2" src="{%static 'core/images/horrible.JPG' %}" alt="">
                         </div>
                     </div>
                 </div>
