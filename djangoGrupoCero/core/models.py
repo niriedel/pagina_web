@@ -7,7 +7,6 @@ class Autor(models.Model):
   idAutor = models.IntegerField(primary_key = True, verbose_name = 'Id del autor')
   nombreAutor = models.CharField(max_length = 60, verbose_name = 'Nombre del autor')
   apellidoAutor = models.CharField(max_length = 60, verbose_name = 'Apellido del autor')
-  numObras = models.IntegerField( verbose_name = 'Numero de obras')
 
   def __str__(self):
     return self.nombreAutor
