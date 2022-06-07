@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Grupo Cero</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../static/core/css/agregarObra.css">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
+    <title>Ver obras</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    {% load static %}
+    <nav class="navbar navbar-expand-lg bg-info text-white">
+        <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item">
+                <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link" href="#">Acerca de </a>
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../inicio/">Informacion</a> 
+              </li>
+              <li class="list-inline-item">
+                <a href="../ver_obras/">
+                  <i class="fa-solid fa-rectangle-list mr-2 fa-2x"></i>Ver Obras
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../agregar_obra/">
+                  <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Nueva obra
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../aceptarRechazarProducto/">
+                  <i class="fas fa-book-open mr-2 fa-2x"></i></i>Estado obra
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../../">
+                  <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+    </nav>
+
+    <div class="container main mt-5">
+      <h3 class="text-center mb-3 mt-3 pt-3">Listado de obras</h3>
+
+      <div class="row">
+        <table class="table m-5" border=1>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Historia</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Tecnica</th>
+            <th>IdAutor</th>
+            <th>Opciones</th>
+          </tr>
+          <tbody>
+          {% for ob in obras %}
+            <tr>
+              <td>{{ob.idObra}}</td>
+              <td>{{ob.nombre}}</td>
+              <td>{{ob.historia}}</td>
+              <td>{{ob.descripcion}}</td>
+              <td>{{ob.precio}}</td>
+              <td>{{ob.tecnica}}</td>
+              <td>{{ob.idAutor}}</td>
+              <td>
+                <a class="d-inline-block mb-2" href="{%url 'form_mod_obra' ob.idObra %}">Modificar</a>
+                <a class="d-inline-block mb-2" href="{%url 'form_del_obra' ob.idObra %}">Eliminar</a>
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

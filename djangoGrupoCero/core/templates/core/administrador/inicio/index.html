@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Perfil Usuario</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../static/core/css/agregarObra.css">
+
+
+    
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+    <!-- NAVBAR -->
+    {% load static %}
+    <nav class="navbar navbar-expand-lg bg-info text-white">
+        <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+       
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav mr-auto">
+             <li class="nav-item active">
+             </li>
+             <li class="nav-item">
+                <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
+              </li>
+             <li class="nav-item">
+               <a class="text-white nav-link" href="#">Acerca de </a>
+             </li>
+             <li class="nav-item">
+               <a class="text-white nav-link" href="#">Contacto</a>
+             </li>
+           </ul>
+           <ul class="list-inline">
+             <li class="list-inline-item">
+               <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../inicio/">Informacion</a> 
+             </li>
+              <li class="list-inline-item">
+                <a href="../ver_obras/">
+                  <i class="fa-solid fa-rectangle-list mr-2 fa-2x"></i>Ver Obras
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../agregar_obra/">
+                  <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Nueva obra
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../aceptarRechazarProducto/">
+                  <i class="fas fa-book-open mr-2 fa-2x"></i></i>Estado obra
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../../">
+                  <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+                </a>
+              </li> 
+           </ul>
+         </div>
+    </nav>
+
+    <div class="container mt-5 p-3 rounded cart table-shadow">
+      <h2 class="text-center">Informacion personal</h2>
+      <div class="row mt-5">
+        <div class="col"><strong>Nombre:</strong> Admin</div>
+        <div class="col"><strong>Password:</strong> ******</div>
+        <div class="col"><strong>Fecha nacimiento:</strong> 07/04/1985</div>
+      </div>
+      <div class="row mt-5">
+        <div class="col"><strong>Email:</strong> admin@gmail.com</div>
+        <div class="col"><strong>Lugar de nacimiento:</strong> Islas caimanes</div>
+        <div class="col"><strong>Celular:</strong> 56987894560</div>
+      </div>
+      <button type="button" class="btn btn-info mt-5">Actualizar información</button>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>

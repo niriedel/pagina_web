@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Grupo Cero</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../static/core/css/agregarObra.css">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
+    <title>Ver obras</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    {% load static %}
+    <nav class="navbar navbar-expand-lg bg-info text-white">
+        <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item">
+                <a target="_blank" class="text-white nav-link" href="../../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link" href="#">Acerca de </a>
+              </li>
+              <li class="nav-item">
+                <a class="text-white nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../administrador/inicio/">Informacion</a> 
+              </li>
+              <li class="list-inline-item">
+                <a href="../administrador/ver_obras/">
+                  <i class="fa-solid fa-rectangle-list mr-2 fa-2x"></i>Ver Obras
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="../agregar_obra/">
+                  <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Nueva obra
+                </a>
+                <li class="list-inline-item">
+                  <a href="../aceptarRechazarProducto/">
+                    <i class="fas fa-book-open mr-2 fa-2x"></i></i>Estado obra
+                  </a>
+                </li>
+              <li class="list-inline-item">
+                <a href="../../">
+                  <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+    </nav>
+
+    <div class="container main mt-5">
+      <h3 class="text-center mb-3 pt-3 ">Modificar Obras</h3>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <form method="post" action="" id="formulario" class="mod-form">
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <input type="submit" class="btn btn-danger" id="modificar" value="Modificar">
+                <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                <div id="error" class="alert alert-success mt-3">
+                  {{mensaje}}
+                </div>
+            </form>
+          </div>
+          <div class="col-4"></div>
+        </div>
+    </div>
+  </body>
+</html>

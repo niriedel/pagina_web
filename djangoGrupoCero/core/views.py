@@ -1,6 +1,46 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .models import Obra
+from .forms import ObraForm
 # Create your views here.
+
+def form_del_obra(request, id):
+    obra = Obra.objects.get(idObra=id)
+    obra.delete()
+    return redirect(to="../administrador/ver_obras")
+
+
+def form_mod_obra(request, id):
+    obra = Obra.objects.get(idObra=id)
+
+    datos = {
+        'form': ObraForm(instance=obra)
+    }
+
+    if request.method=='POST':
+        formulario=ObraForm(data=request.POST, instance=obra)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']='Modificado correctamente'
+    
+    return render(request, 'core/administrador/mod_obra/form_mod_obra.html', datos)
+
+def form_add_obra(request):
+    contexto = { 
+        'form': ObraForm(),
+        }
+    if request.method=='POST':
+        formulario=ObraForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            contexto['mensaje']='Datos guardados correctamente'
+    return render(request, 'core/administrador/agregar_obra/form_add_obra.html', contexto)
+
+def ver_obras(request):
+    listaObras = Obra.objects.all()
+    contexto = {
+        'obras': listaObras,
+    }
+    return render(request, 'core/administrador/ver_obras/index.html', contexto)
 
 def index(request):
     return render(request, 'core/index.html')
@@ -11,10 +51,6 @@ def login(request):
 
 def register(request):
     return render(request, 'core/acceso/register/index.html')
-
-#carpeta aceptarRechazarProducto
-def aceptarRechazarProducto(request):
-    return render(request, 'core/aceptarRechazarProducto/index.html')
 
 #carpeta api
 def api(request):
@@ -66,3 +102,10 @@ def usuario_inicio(request):
 
 def usuario_publicar(request):
     return render(request, 'core/usuario/publicar/index.html')
+
+#carpeta administrador
+def admin_inicio(request):
+    return render(request, 'core/administrador/inicio/index.html')
+
+def admin_aceptarRechazarProducto(request):
+    return render(request, 'core/administrador/aceptarRechazarProducto/index.html')
