@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'djangoGrupoCero.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xepdb1',
-        'USER': 'alumno',
-        'PASSWORD': 'duoc',
+        'NAME': '127.0.0.1:1521/orcl',
+        'USER': 'hr',
+        'PASSWORD': 'hr',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
