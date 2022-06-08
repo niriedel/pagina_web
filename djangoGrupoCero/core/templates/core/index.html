@@ -1,6 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 2px solid #060606;
+      text-align: left;
+      padding: 10px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #09c5f0;
+    }
+    </style>
+
     <title>Grupo Cero</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -46,19 +64,19 @@
       </div>
     </nav>
 
-    <div class="container main">
+    <div class="container main ">
       <!-- CAROUSEL -->
       <h1 class="text-center mt-3">Obras destacadas</h1>
       <div id="carouselExampleControls" class="carousel slide mt-5 mb-5" data-ride="carousel">
         <div class="carousel-inner ">
           <div class="carousel-item active border">
-            <a target=”_blank” href="obras/obra_imp/"><img class="d-block rounded border" src="{%static 'core/images/impresionista_1.jpg'%}" alt="First slide"></a>
+            <a target=”_blank” href="obras/obra_imp/"><img class="d-block rounded border" src="{%static 'core/images/impresionista_1.jpg'%}" alt="First slide" width="200" height="580"></a>
           </div>
           <div class="carousel-item">
-            <a target=”_blank” href="obras/obra_dad"><img class="d-block rounded border" src="{%static 'core/images/dadaismo_4.jpg'%}" alt="Second slide"></a>
+            <a target=”_blank” href="obras/obra_dad"><img class="d-block rounded border" src="{%static 'core/images/dadaismo_4.jpg'%}" alt="Second slide" width="200" height="580"></a>
           </div>
           <div class="carousel-item">
-            <a target=”_blank” href="obras/obra_med"><img class="d-block rounded border" src="{%static 'core/images/medieval_3.jpg'%}" alt="Third slide"></a>
+            <a target=”_blank” href="obras/obra_med"><img class="d-block rounded border" src="{%static 'core/images/medieval_3.jpg'%}" alt="Third slide" width="200" height="580"></a>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -123,7 +141,89 @@
           </div>
         </div>
       </div>
+      <br><br>
 
+      <div class="container main">
+        <h2>Filtrar Obras</h2>
+        <p>Puedes filtrar una obra por su nombre, su autor o el tipo de arte utilizada...</p>  
+        <input id="myyInput" type="text" placeholder="Buscar..">
+        <br><br>
+  
+        <table>
+          <thead>
+          <tr>
+            <th>Nombre de la obra</th>
+            <th>Auto de la obra</th>
+            <th>Tipo de arte utilizada</th>
+          </tr>
+          </thead>
+          <tbody id="myTable">
+          <tr>
+            <td>Juanito Perez</td>
+            <td>Canciones de dia</td>
+            <td>Medieval</td>
+          </tr>
+          <tr>
+            <td>Juanito Perez</td>
+            <td>Reyes magos</td>
+            <td>Impresionismo</td>
+          </tr>
+          <tr>
+            <td>Juanito Perez</td>
+            <td>Guerra santa</td>
+            <td>Dadaismo</td>
+          </tr>
+          <tr>
+            <td>Juanito Perez</td>
+            <td>Comediantes</td>
+            <td>Impresionismo</td>
+          </tr>
+          <tr>
+            <td>Alberto Fernández</td>
+            <td>Calida Noche</td>
+            <td>Dadaismo</td>
+          </tr>
+          <tr>
+            <td>Alberto Fernández</td>
+            <td>Tarde en Paris</td>
+            <td>Dadaismo</td>
+          </tr>
+          <tr>
+            <td>Alberto Fernández</td>
+            <td>Noche de soles</td>
+            <td>Dadaismo</td>
+          </tr>
+          <tr>
+            <td>Alberto Fernández</td>
+            <td>Flores de colores</td>
+            <td>Impresionismo</td>
+          </tr>
+          <tr>
+            <td>Pablo Pinto</td>
+            <td>Expresiones del cielo</td>
+            <td>Impresionismo</td>
+          </tr>
+          <tr>
+            <td>Pablo Pinto</td>
+            <td>Maquinaria de la historia</td>
+            <td>Impresionismo</td>
+          </tr>
+          <tr>
+            <td>Pablo Pinto</td>
+            <td>Verdaderos rostros</td>
+            <td>Dadaismo</td>
+          </tr>
+          <tr>
+            <td>Pablo Pinto</td>
+            <td>Reflejo de vejéz</td>
+            <td>Impresionismo</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <br><br><br>
+        
       <div class="mb-4" id="contacto">
       <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
       <p class="text-center w-responsive mx-auto mb-5">¿Tienes alguna pregunta? No dudes en contactarnos, nos comunicaremos contigo a la brevedad.</p>
@@ -168,11 +268,24 @@
         </div>
       </div>
     </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../../static/core/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#myyInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
   </body>
 </html>

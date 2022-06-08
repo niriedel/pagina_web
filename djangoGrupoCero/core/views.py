@@ -56,6 +56,9 @@ def register(request):
 def api(request):
     return render(request, 'core/api/index.html')
 
+def api_index(request):
+    return render(request, 'api/core/index.html')
+
 #carpeta artistas
 def artista_dad(request):
     return render(request, 'core/artistas/art_dad/index.html')

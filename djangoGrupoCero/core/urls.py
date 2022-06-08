@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar, ver_obras, form_add_obra, form_mod_obra, form_del_obra, admin_inicio, admin_aceptarRechazarProducto
+from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar, ver_obras, form_add_obra, form_mod_obra, form_del_obra, admin_inicio, admin_aceptarRechazarProducto,api_index
 
 urlpatterns = [
     path('', index, name="index"),
@@ -8,6 +8,7 @@ urlpatterns = [
     path('acceso/register/', register, name="register"),
     #carpeta api
     path('api/', api, name="api"),
+    path('api/core/index.html/', api_index, name="api_index"),
     #carpeta artistas
     path('artistas/art_dad/', artista_dad, name="art_dad"),
     path('artistas/art_imp/', artista_imp, name="art_imp"),
