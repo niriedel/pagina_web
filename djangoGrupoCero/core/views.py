@@ -14,6 +14,7 @@ def form_mod_obra(request, id):
 
     datos = {
         'form': ObraForm(instance=obra)
+
     }
 
     if request.method=='POST':
@@ -21,6 +22,7 @@ def form_mod_obra(request, id):
         if formulario.is_valid():
             formulario.save()
             datos['mensaje']='Modificado correctamente'
+        datos['form'] = ObraForm(instance=Obra.objects.get(id=id))
     
     return render(request, 'core/administrador/mod_obra/form_mod_obra.html', datos)
 
@@ -29,10 +31,10 @@ def form_add_obra(request):
         'form': ObraForm(),
         }
     if request.method=='POST':
-        formulario=ObraForm(request.POST)
+        formulario=ObraForm(request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
-            contexto['mensaje']='Datos guardados correctamente'
+            contexto['mensaje']='Datos enviados correctamente! Su obra será publicada sólo si es aprobada por el Administrador'
     return render(request, 'core/usuario/publicar/form_add_obra.html', contexto)
     
 
