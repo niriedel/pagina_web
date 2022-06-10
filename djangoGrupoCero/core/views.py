@@ -11,16 +11,17 @@ def form_del_obra(request, id):
 
 def form_mod_obra(request, id):
     obra = Obra.objects.get(idObra=id)
-
     datos = {
         'form': ObraForm(instance=obra)
+
     }
 
     if request.method=='POST':
-        formulario=ObraForm(data=request.POST, instance=obra)
+        formulario=ObraForm(data=request.POST, instance=obra, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             datos['mensaje']='Modificado correctamente'
+        datos['form'] = ObraForm(instance=Obra.objects.get(id=id))
     
     return render(request, 'core/administrador/mod_obra/form_mod_obra.html', datos)
 
@@ -29,7 +30,7 @@ def form_add_obra(request):
         'form': ObraForm(),
         }
     if request.method=='POST':
-        formulario=ObraForm(request.POST)
+        formulario=ObraForm(request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             contexto['mensaje']='Datos guardados correctamente'

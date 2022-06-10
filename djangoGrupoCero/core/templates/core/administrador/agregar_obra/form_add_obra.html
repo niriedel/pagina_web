@@ -68,17 +68,18 @@
           <div class="row">
             <div class="col-4"></div>
             <div class="col-4">
-              <form method="post" action="" id="formulario" class="add-form">
+              <form method="post" action="" id="formulario" class="add-form" enctype="multipart/form-data">
                   {% csrf_token %}
-                  <table>
-                      {{form.as_table}}
+                  <table>        
+                    {{form.as_table}}   
                   </table>
                   <input type="submit" class="btn btn-primary mr-5 ml-5 mt-3" id="enviar" value="Enviar">
                   <input type="reset" class="btn btn-primary mt-3" id="limpiar" value="Limpiar">
                   <div id="error" class="alert alert-success mt-3">
                     {{mensaje}}
                   </div>
-              </form>
+              </form> 
+                    
             </div>
             <div class="col-4"></div>
           </div>

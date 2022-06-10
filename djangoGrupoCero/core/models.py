@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -19,8 +20,10 @@ class Obra(models.Model):
   precio = models.IntegerField(verbose_name = 'Precio')
   tecnica = models.CharField(max_length = 75, verbose_name = 'Tecnica usada')
   idAutor = models.ForeignKey(Autor, on_delete = models.CASCADE)
+  imagen = models.ImageField(upload_to="obrasimg", null=True)
 
   def __str__(self):
     return self.nombre
+
 
 
