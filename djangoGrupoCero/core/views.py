@@ -4,13 +4,13 @@ from .forms import ObraForm
 # Create your views here.
 
 def form_del_obra(request, id):
-    obra = Obra.objects.get(idObra=id)
+    obra = Obra.objects.get(id=id)
     obra.delete()
     return redirect(to="../administrador/ver_obras")
 
 
 def form_mod_obra(request, id):
-    obra = Obra.objects.get(idObra=id)
+    obra = Obra.objects.get(id=id)
 
     datos = {
         'form': ObraForm(instance=obra)
@@ -33,7 +33,8 @@ def form_add_obra(request):
         if formulario.is_valid():
             formulario.save()
             contexto['mensaje']='Datos guardados correctamente'
-    return render(request, 'core/administrador/agregar_obra/form_add_obra.html', contexto)
+    return render(request, 'core/usuario/publicar/form_add_obra.html', contexto)
+    
 
 def ver_obras(request):
     listaObras = Obra.objects.all()
@@ -102,9 +103,6 @@ def usuario_estadoProducto(request):
 
 def usuario_inicio(request):
     return render(request, 'core/usuario/inicio/index.html')
-
-def usuario_publicar(request):
-    return render(request, 'core/usuario/publicar/index.html')
 
 #carpeta administrador
 def admin_inicio(request):

@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         if (userEmail === "usuario@gmail.com" && userPassword === "usuario") {
             alert("Bienvenido, ingresando a tu perfil...");
-            window.location.replace("../../usuario/inicio/index.html");
+            window.location.replace("../../usuario/inicio/");
             return
         } 
 

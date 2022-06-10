@@ -16,9 +16,10 @@
     <script src="https://kit.fontawesome.com/f9e85cf70c.js" crossorigin="anonymous"></script>
 </head>
   <body>
-          <!-- NAVBAR -->
+    <!-- NAVBAR -->
+    {% load static %}
     <nav class="navbar navbar-expand-lg bg-info text-white">
-        <img src="../../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+        <img src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
          </button>
@@ -28,7 +29,7 @@
              <li class="nav-item active">
              </li>
              <li class="nav-item">
-                <a target="_blank" class="text-white nav-link" href="../../">Inicio</a>
+                <a class="text-white nav-link" href="../../">Inicio</a>
               </li>
              <li class="nav-item">
                <a class="text-white nav-link" href="#">Acerca de </a>
@@ -39,25 +40,25 @@
            </ul>
            <ul class="list-inline">
              <li class="list-inline-item">
-               <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="index.html">Informacion</a> 
+               <i class="fa-solid fa-user mr-2 fa-2x"></i><a href="../inicio/">Informacion</a> 
              </li>
               <li class="list-inline-item">
-                <a href="../carrito/index.html">
+                <a href="../carrito/">
                   <i class="fa-solid fas fa-shopping-cart mr-2 fa-2x"></i>Carrito
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="../publicar/index.html">
+                <a href="../publicar/">
                   <i class="fa-solid fa-file-circle-plus mr-2 fa-2x"></i>Agregar Obra
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="../estadoProducto/index.html">
+                <a href="../estadoProducto/">
                   <i class="fa-solid fa-address-card mr-2 fa-2x"></i>Estado Obra
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="../../index.html">
+                <a href="../../">
                   <i class="fa-solid fa-arrow-right-from-bracket mr-2 fa-2x"></i>Salir
                 </a>
               </li>

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, usuario_publicar, ver_obras, form_add_obra, form_mod_obra, form_del_obra, admin_inicio, admin_aceptarRechazarProducto,api_index
+from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, ver_obras, form_add_obra, form_mod_obra, form_del_obra, admin_inicio, admin_aceptarRechazarProducto,api_index
 
 urlpatterns = [
     path('', index, name="index"),
@@ -27,9 +27,8 @@ urlpatterns = [
     path('usuario/carrito/', usuario_carrito, name="usuario_carrito"),
     path('usuario/estadoProducto/', usuario_estadoProducto, name="usuario_estadoProducto"),
     path('usuario/inicio/', usuario_inicio, name="usuario_inicio"),
-    path('usuario/publicar/', usuario_publicar, name="usuario_publicar"),
     #archivos form
-    path('administrador/agregar_obra/', form_add_obra, name="form_add_obra"),
+    path('usuario/publicar/', form_add_obra, name="form_add_obra"),
     path('form-mod-obra/<id>', form_mod_obra, name="form_mod_obra"),
     path('form-del-obra/<id>', form_del_obra, name="form_del_obra"),
     #carpeta admin

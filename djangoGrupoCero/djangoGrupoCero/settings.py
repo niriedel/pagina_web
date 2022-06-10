@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'djangoGrupoCero.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/orcl',
-        'USER': 'hr',
-        'PASSWORD': 'hr',
+        'NAME': '127.0.0.1:1521/xe',
+        'USER': 'pdbGrupoCero',
+        'PASSWORD': '123',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
@@ -129,3 +129,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

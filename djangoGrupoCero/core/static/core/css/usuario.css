@@ -1,3 +1,15 @@
+.navbar img {
+  width: 100%;
+}
+
+.navbar img {
+  width: 5rem;
+}
+
+.navbar .nav-item a {
+  padding-top: 2rem;
+}
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
