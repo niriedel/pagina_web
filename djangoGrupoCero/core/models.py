@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -13,7 +14,7 @@ from django.db import models
 
 class Obra(models.Model):
   nombre = models.CharField (max_length = 60, verbose_name = 'Nombre')
-  imagen = models.ImageField(verbose_name = 'Imagen', null=True, upload_to='userFiles/' )
+  imagen = models.ImageField(verbose_name = 'Imagen', upload_to="obrasimg", null=True)
   historia = models.CharField(max_length = 250, verbose_name = 'Historia')
   descripcion = models.CharField(max_length = 250, verbose_name = 'Descripcion')
   precio = models.IntegerField(verbose_name = 'Precio')

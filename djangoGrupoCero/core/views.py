@@ -17,7 +17,7 @@ def form_mod_obra(request, id):
     }
 
     if request.method=='POST':
-        formulario=ObraForm(data=request.POST, instance=obra)
+        formulario=ObraForm(data=request.POST, instance=obra, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             datos['mensaje']='Modificado correctamente'

@@ -1,5 +1,8 @@
-from django.urls import path
+from django.urls import path, include
+import imp
 from .views import index, login, register, api, artista_dad, artista_imp, artista_med, ca_dad, ca_imp, ca_med, obra_dad, obra_med, obra_imp, buscar, usuario_carrito, usuario_estadoProducto, usuario_inicio, ver_obras, form_add_obra, form_mod_obra, form_del_obra, admin_inicio, admin_aceptarRechazarProducto,api_index
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', index, name="index"),
@@ -36,3 +39,5 @@ urlpatterns = [
     path('administrador/aceptarRechazarProducto/', admin_aceptarRechazarProducto, name="admin_aceptarRechazarProducto"),
     path('administrador/ver_obras/', ver_obras, name="ver_obras")
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

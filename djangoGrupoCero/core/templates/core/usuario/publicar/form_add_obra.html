@@ -132,7 +132,7 @@
         <div class="row">
           <div class="col-4"></div>
           <div class="col-4">
-            <form method="post" action="" id="add-form">
+            <form method="post" action="" id="add-form" enctype="multipart/form-data">
                 {% csrf_token %}
                 <table>
                     {{form.as_table}}

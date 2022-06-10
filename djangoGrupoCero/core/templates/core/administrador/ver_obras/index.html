@@ -74,6 +74,7 @@
             <th>Precio</th>
             <th>Tecnica</th>
             <th>Autor</th>
+            <th>Imagen</th>
             <th>Opciones</th>
           </tr>
           <tbody>
@@ -86,6 +87,9 @@
               <td>{{ob.precio}}</td>
               <td>{{ob.tecnica}}</td>
               <td>{{ob.nombreAutor}}</td>
+              {% if ob.imagen %}
+              <td><img src="{{  ob.imagen.url }}" width="100" height="100"></td>
+              {% endif %}
               <td>
                 <a class="d-inline-block mb-2" href="{%url 'form_mod_obra' ob.id %}">Modificar</a>
                 <a class="d-inline-block mb-2" href="{%url 'form_del_obra' ob.id %}">Eliminar</a>
