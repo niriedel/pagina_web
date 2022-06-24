@@ -12,8 +12,10 @@ from rest_framework.permissions import IsAuthenticated
 
 @csrf_exempt
 @api_view(['GET', 'POST'])
-@authentication_classes([]) # Add this
-@permission_classes([]) # Maybe add this too
+@permission_classes((IsAuthenticated,))
+
+# @authentication_classes([]) # Add this
+# @permission_classes([]) # Maybe add this too
 def lista_obras(request):
     if request.method == 'GET':
         lista = Obra.objects.all()
@@ -29,7 +31,9 @@ def lista_obras(request):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes([]) # Maybe add this too
+@permission_classes((IsAuthenticated,))
+
+# @permission_classes([]) # Maybe add this too
 def detalle_obra(request,id):
     try:
         obra = Obra.objects.get(id=id)

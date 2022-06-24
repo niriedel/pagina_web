@@ -8,19 +8,24 @@ from django.contrib.auth.models import User
 from django.contrib.auth.hashers import check_password
 from rest_framework.authtoken.models import Token
 
+
 @api_view(['POST'])
 def login(request):
     data = JSONParser().parse(request)
 
     username = data['username']
     password = data['password']
-    try:
-        user = User.objects.get(username=username)
-    except User.DoesNotExist:
-        return Response('Usuario Inválido')
-    pass_valido = check_password(password, user.password)
-    if not pass_valido:
-        return Response('Password inválida')
-    
+    user = User.objects.create_user(username, password)
     token, created = Token.objects.get_or_create(user=user)
     return Response(token.key)
+    # try:
+    #     user = User.objects.create_user(username, password)
+    #     user = User.objects.get(username=username)
+    # except User.DoesNotExist:
+    #     return Response('Usuario Inválido')
+    # pass_valido = check_password(password, user.password)
+    # if not pass_valido:
+    #     return Response('Password inválida')
+    
+    # token, created = Token.objects.get_or_create(user=user)
+    # return Response(token.key)
