@@ -32,7 +32,7 @@ def lista_obras(request):
 @permission_classes([]) # Maybe add this too
 def detalle_obra(request,id):
     try:
-        obra = Obra.objects.get(patente=id)
+        obra = Obra.objects.get(id=id)
     except:
         return Response(status=status.HTTP_404_NOT_FOUND)
     if request.method == 'GET':

@@ -18,8 +18,8 @@ def login(request):
         user = User.objects.get(username=username)
     except User.DoesNotExist:
         return Response('Usuario Inválido')
-    sw = check_password(password, user.password)
-    if not sw:
+    pass_valido = check_password(password, user.password)
+    if not pass_valido:
         return Response('Password inválida')
     
     token, created = Token.objects.get_or_create(user=user)
