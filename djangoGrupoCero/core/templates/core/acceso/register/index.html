@@ -39,7 +39,7 @@
         <button type="button" class="btn btn-light mr-5  my-2 my-sm-0">Buscar</button>
 
         </form>
-        <a target= "_blank" href="../login/index.html"type="button" class="btn btn-light mr-1 ml-5">Ingresar</button></a>
+        <a target= "_blank" href="../login/"type="button" class="btn btn-light mr-1 ml-5">Ingresar</button></a>
         <a href="index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
       </div>
     </nav>
@@ -47,26 +47,28 @@
     <div class="container register-container">
         <div class="w-50 register-form-1 m-auto">
             <h3>Crea tu cuenta</h3>
-            <form id="register-form">
+            <form method="POST" id="register-form">
+              {% csrf_token %}
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Ingresa tu nombre *" value="" id="userName"/>
+                  <input name="nombre" type="text" class="form-control" placeholder="Ingresa tu nombre *" value="" id="userName"/>
                 </div>
 
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Ingresa tu primer apellido*" value="" id="userApellido"/>
+                  <input name="apellido" type="text" class="form-control" placeholder="Ingresa tu primer apellido*" value="" id="userApellido"/>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Ingresa tu email *" value="" id="userEmail"/>
+                    <input name="email" type="email" class="form-control" placeholder="Ingresa tu email *" value="" id="userEmail"/>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Ingresa tu contraseña *" value="" id="userPassword"/>
+                    <input name="contraseña" type="password" class="form-control" placeholder="Ingresa tu contraseña *" value="" id="userPassword"/>
                     <p class="mt-1 text-center text-secondary small">Los campos con * son obligatorios</p>
                 </div>
 
                 <div class="form-group">
-                  <button type="submit" class="btn btnSubmit">Registrarse</button>
+                  <!-- <button type="submit" class="btn btnSubmit" value="Enviar">Registrarse</button> -->
+                  <input type="submit" class="btn btn-primary mr-5 ml-5 mt-3" id="enviar" value="Registrarse">
                 </div>
             </form>
         </div>
