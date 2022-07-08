@@ -4,14 +4,6 @@ from django.db import models
 # Create your models here.
 
 # Modelo para obra
-# class Autor(models.Model):
-#   idAutor = models.IntegerField(primary_key = True, verbose_name = 'Id del autor')
-#   nombreAutor = models.CharField(max_length = 60, verbose_name = 'Nombre del autor')
-#   apellidoAutor = models.CharField(max_length = 60, verbose_name = 'Apellido del autor')
-
-#   def __str__(self):
-#     return self.nombreAutor
-
 class Obra(models.Model):
   nombre = models.CharField (max_length = 60, verbose_name = 'Nombre')
   imagen = models.ImageField(verbose_name = 'Imagen', upload_to="obrasimg", null=True)
