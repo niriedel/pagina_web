@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 2px solid #060606;
+        text-align: left;
+        padding: 10px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #09c5f0;
+      }
+      </style>
     <title>Grupo Cero</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,13 +27,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style.css">
-
-
+    <link rel="stylesheet" href="../../static/core/css/main.css">
   </head>
   <body>
     <!-- NAVBAR -->
+    {% load static %}
+
     <nav class="navbar navbar-light navbar-expand-lg bg-info">
-      <img class="navbar-brand" src="../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+      <img class="navbar-brand" src="{%static 'core/images/Logotipo_degradado_estudio_varios_colores.png' %}" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,13 +61,91 @@
           </div>
           <a target= "_blank" href=""><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
         </form>
-        <a target= "_blank" href="acceso/login/index.html"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
-        <a target= "_blank" href="acceso/register/index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+        <a target= "_blank" href="../acceso/login"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
+        <a target= "_blank" href="../acceso/register"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
       </div>
     </nav>
 
+    <div class="container main mt-5 mb-5">
+      <h2 class="pt-2" >Filtrar Obras</h2>
+      <p>Puedes filtrar una obra por su nombre, su autor o el tipo de arte utilizada...</p>  
+      <input id="myyInput" type="text" placeholder="Buscar..">
+      <br><br>
 
-        <div class="container mt-5 text-center">
+      <table>
+        <thead>
+        <tr>
+          <th>Nombre de la obra</th>
+          <th>Auto de la obra</th>
+          <th>Tipo de arte utilizada</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+        <tr>
+          <td>Juanito Perez</td>
+          <td>Canciones de dia</td>
+          <td>Medieval</td>
+        </tr>
+        <tr>
+          <td>Juanito Perez</td>
+          <td>Reyes magos</td>
+          <td>Impresionismo</td>
+        </tr>
+        <tr>
+          <td>Juanito Perez</td>
+          <td>Guerra santa</td>
+          <td>Dadaismo</td>
+        </tr>
+        <tr>
+          <td>Juanito Perez</td>
+          <td>Comediantes</td>
+          <td>Impresionismo</td>
+        </tr>
+        <tr>
+          <td>Alberto Fernández</td>
+          <td>Calida Noche</td>
+          <td>Dadaismo</td>
+        </tr>
+        <tr>
+          <td>Alberto Fernández</td>
+          <td>Tarde en Paris</td>
+          <td>Dadaismo</td>
+        </tr>
+        <tr>
+          <td>Alberto Fernández</td>
+          <td>Noche de soles</td>
+          <td>Dadaismo</td>
+        </tr>
+        <tr>
+          <td>Alberto Fernández</td>
+          <td>Flores de colores</td>
+          <td>Impresionismo</td>
+        </tr>
+        <tr>
+          <td>Pablo Pinto</td>
+          <td>Expresiones del cielo</td>
+          <td>Impresionismo</td>
+        </tr>
+        <tr>
+          <td>Pablo Pinto</td>
+          <td>Maquinaria de la historia</td>
+          <td>Impresionismo</td>
+        </tr>
+        <tr>
+          <td>Pablo Pinto</td>
+          <td>Verdaderos rostros</td>
+          <td>Dadaismo</td>
+        </tr>
+        <tr>
+          <td>Pablo Pinto</td>
+          <td>Reflejo de vejéz</td>
+          <td>Impresionismo</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+        <!-- <div class="container mt-5 text-center">
             <ol>
                 <h2>Autores</h2>
                 <li><a href="../artistas/art_imp/index.html">Alberto Fernández</a> </li>
@@ -62,7 +158,7 @@
                 <li><a href="../categorias/ca_medieval/index.html">Medieval</a> </li>
                 <li><a href="../artistas/art_imp/index.html">Impresionismo</a> </li>
             </ol>
-        </div>
+        </div> -->
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -70,5 +166,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#myyInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+    </script>
   </body>
 </html>

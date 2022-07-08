@@ -66,7 +66,6 @@ def login(request):
 
     return render(request, 'core/acceso/login/index.html')
             
-
 def register(request):
     if request.method=='POST':
         if request.POST.get('nombre') and request.POST.get('apellido') and request.POST.get('email') and request.POST.get('contraseña'):

@@ -15,12 +15,14 @@
   </head>
   <body>
     <!-- NAVBAR -->
+    {% load static %}
+
     <nav class="navbar navbar-light navbar-expand-lg bg-info">
-      <img class="navbar-brand" src="../images/Logotipo_degradado_estudio_varios_colores.png" alt="">
+      <img class="navbar-brand" src="../../../static/core/images/Logotipo_degradado_estudio_varios_colores.png" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -33,24 +35,24 @@
             <a class="text-white nav-link" href="#contacto">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link" href="index.html">Otras obras</a>
+            <a class="text-white nav-link" href="">Otras obras</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" autocomplete="off" action="/action_page.php">
           <div class="autocomplete" style="width:300px;">
             <input id="myInput" type="text" name="myCountry" placeholder="buscar por artista/tipo arte/concepto">
           </div>
-          <a target= "_blank" href="buscar/index.html"><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
+          <a target= "_blank" href="../buscar/"><button type="button" class="btn btn-light mr-5 ml-1 ">Buscar</button></a>
         </form>
-        <a target= "_blank" href="acceso/login/index.html"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
-        <a target= "_blank" href="acceso/register/index.html"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
+        <a target= "_blank" href="../acceso/login/"><button type="button" class="btn btn-light mr-1 ">Ingresar</button></a>
+        <a target= "_blank" href="../acceso/register/"><button type="button" class="btn btn-light mr-5 ml-1">Registrarse</button></a>
       </div>
     </nav>
 
     <div class="container text-center mt-5" id="api-box">
         <h1 class="pt-3">Metropolitan Museum of Art Met Collection</h1>
         <div class="row">
-            <a target="_blank" href="https://www.metmuseum.org/"> <img id="museum" class="w-100 p-5 rounded" src="../images/metropolitan-museum-of-art-new-york-city.jpg" alt="">
+            <a target="_blank" href="https://www.metmuseum.org/"> <img id="museum" class="w-100 p-5 rounded" src="../../../static/core/images/metropolitan-museum-of-art-new-york-city.jpg" alt="">
             </a>
             </div>
         <div class="row">

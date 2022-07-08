@@ -1,23 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 2px solid #060606;
-      text-align: left;
-      padding: 10px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #09c5f0;
-    }
-    </style>
+
 
     <title>Grupo Cero</title>
     <!-- Required meta tags -->
@@ -64,7 +48,7 @@
       </div>
     </nav>
 
-    <div class="container main ">
+    <div class="container main">
       <!-- CAROUSEL -->
       <h1 class="text-center mt-3">Obras destacadas</h1>
       <div id="carouselExampleControls" class="carousel slide mt-5 mb-5" data-ride="carousel">
@@ -141,89 +125,6 @@
           </div>
         </div>
       </div>
-      <br><br>
-
-      <div class="container main">
-        <h2>Filtrar Obras</h2>
-        <p>Puedes filtrar una obra por su nombre, su autor o el tipo de arte utilizada...</p>  
-        <input id="myyInput" type="text" placeholder="Buscar..">
-        <br><br>
-  
-        <table>
-          <thead>
-          <tr>
-            <th>Nombre de la obra</th>
-            <th>Auto de la obra</th>
-            <th>Tipo de arte utilizada</th>
-          </tr>
-          </thead>
-          <tbody id="myTable">
-          <tr>
-            <td>Juanito Perez</td>
-            <td>Canciones de dia</td>
-            <td>Medieval</td>
-          </tr>
-          <tr>
-            <td>Juanito Perez</td>
-            <td>Reyes magos</td>
-            <td>Impresionismo</td>
-          </tr>
-          <tr>
-            <td>Juanito Perez</td>
-            <td>Guerra santa</td>
-            <td>Dadaismo</td>
-          </tr>
-          <tr>
-            <td>Juanito Perez</td>
-            <td>Comediantes</td>
-            <td>Impresionismo</td>
-          </tr>
-          <tr>
-            <td>Alberto Fernández</td>
-            <td>Calida Noche</td>
-            <td>Dadaismo</td>
-          </tr>
-          <tr>
-            <td>Alberto Fernández</td>
-            <td>Tarde en Paris</td>
-            <td>Dadaismo</td>
-          </tr>
-          <tr>
-            <td>Alberto Fernández</td>
-            <td>Noche de soles</td>
-            <td>Dadaismo</td>
-          </tr>
-          <tr>
-            <td>Alberto Fernández</td>
-            <td>Flores de colores</td>
-            <td>Impresionismo</td>
-          </tr>
-          <tr>
-            <td>Pablo Pinto</td>
-            <td>Expresiones del cielo</td>
-            <td>Impresionismo</td>
-          </tr>
-          <tr>
-            <td>Pablo Pinto</td>
-            <td>Maquinaria de la historia</td>
-            <td>Impresionismo</td>
-          </tr>
-          <tr>
-            <td>Pablo Pinto</td>
-            <td>Verdaderos rostros</td>
-            <td>Dadaismo</td>
-          </tr>
-          <tr>
-            <td>Pablo Pinto</td>
-            <td>Reflejo de vejéz</td>
-            <td>Impresionismo</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <br><br><br>
-        
       <div class="mb-4" id="contacto">
       <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
       <p class="text-center w-responsive mx-auto mb-5">¿Tienes alguna pregunta? No dudes en contactarnos, nos comunicaremos contigo a la brevedad.</p>
@@ -277,15 +178,5 @@
     <script src="../../static/core/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      $("#myyInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#myTable tr").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
-  </script>
   </body>
 </html>
